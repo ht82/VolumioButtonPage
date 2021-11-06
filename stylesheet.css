@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+#wrapper {
+  /* border: 1px solid blue; */
+}
+
+#setup {
+  background-color: white;
+  padding: 50px;
+}
+
+iframe {
+  /* display: block; */
+  display: none;
+}
+
+.bigbutton a {
+  font-size: 8vh;
+  text-decoration: none;
+}
+
+.hugebutton a {
+  font-size: 15vh;
+  text-decoration: none;
+}
+
+#playpause {
+  /* border: 1px solid green; */
+  position: fixed;
+  left: 40%;
+  top: 31%;
+  width: 20%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#skipZurueck {
+  /* border: 1px solid red; */
+  position: fixed;
+  left: 20%;
+  top: 31%;
+  width: 20%;
+  text-align: right;
+  vertical-align: bottom;
+}
+
+#skipVor {
+  /* border: 1px solid blue; */
+  position: fixed;
+  left: 60%;
+  top: 31%;
+  width: 20%;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+#volumeRunter {
+  /* border: 1px solid black; */
+  position: fixed;
+  left: 40%;
+  top: 54%;
+  width: 20%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#volumeHoch {
+  /* border: 1px solid yellow; */
+  position: fixed;
+  left: 40%;
+  top: 5%;
+  width: 20%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#random {
+  /* border: 1px solid pink; */
+  position: fixed;
+  left: 75%;
+  top: 61%;
+  width: 20%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#repeat {
+  /* border: 1px solid deeppink; */
+  position: fixed;
+  left: 5%;
+  top: 61%;
+  width: 20%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#playlists {
+  /* border: 1px solid deeppink; */
+  position: fixed;
+  left: 1%;
+  bottom: 5%;
+  width: 98%;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 1.4em;
+}
+
+#playlists table {
+  /* border: 1px solid blue; */
+  width: 100%;
+  table-layout: fixed;
+}
+
+#playlists td {
+  /* border: 1px solid red; */
+  padding: 15px 0px;
+  white-space: nowrap;
+}
+
+td a {
+  text-decoration: none;
+  background-color: #422;
+  color: white;
+  padding: 12px;
+  border-radius: 100px;
+}
+
+#kontakt {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	width: 100%;
+	z-index: 5000;
+	text-align: right;
+	background-color: #000;
+  color: #ddd;
+	padding: 10px;
+}
+
+#kontakt a {
+  color: white;
+  text-decoration: none;
+}
+
+#kontakt a:hover {
+  text-decoration: underline;
+}
+
+#kontaktdetails {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 700px;
+	background-color: #000;
+	padding: 3000px 10px 10px 3000px;
+}
