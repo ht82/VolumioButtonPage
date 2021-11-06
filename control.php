@@ -79,6 +79,7 @@
       echo "      <table>\n";
       echo "        <tr>\n";
       foreach ($playlists as $key => $playlist) {
+        $playlist = trim($playlist);
         echo "          <td>\n";
         echo "            <a href=\"http://$volumioIP/api/v1/commands/?cmd=playplaylist&name=$playlist\" target=\"steuerframe\">$playlist</a>\n";
         echo "          </td>\n";
