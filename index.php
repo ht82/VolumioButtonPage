@@ -1,5 +1,8 @@
 <!doctype html>
-
+<?php
+	$language=intval($_GET["language"] ?? "2");
+	$texte = json_decode(file_get_contents('translations.json'), false);
+?>
 <html>
 <head>
 	<title> Volumio Control </title>
@@ -13,43 +16,44 @@
 </head>
 <body>
 	<div id="setup">
-		<h1>Konfiguriere Deine Volumio-Basissteuerung</h1>
+		<h1><?php echo $texte[$language][0] ?></h1>
+		<p><?php echo $texte[$language][17] ?></p>
 		<p>&nbsp;</p>
 		<form action="control.php" method="get">
-			<h2>Notwendige Einstellungen</h2>
+			<h2><?php echo $texte[$language][1] ?></h2>
 			<p>
-				<label for="volumioIP">Wie lautet die <b>IP</b> Deines Volumios?</label>
-				<input name="volumioIP" type="text" placeholder="1.2.3.4">
+				<label for="volumioIP"><?php echo $texte[$language][2] ?></label>
+				<input name="volumioIP" type="text" placeholder="<?php echo $texte[$language][3] ?>">
 			</p>
 			<p>&nbsp;</p>
-			<h2>Buttons reduzieren und Playlisten hinterlegen</h2>
+			<h2><?php echo $texte[$language][4] ?></h2>
       <p>
 				<input name="playpause" id="playpauseCB" type="checkbox" value="0" unchecked>
-				<label for="playpause">Play/Pause verbergen</label>
+				<label for="playpause"><?php echo $texte[$language][5] ?></label>
 			</p>
       <p>
 				<input name="skip" id="skipCB" type="checkbox" value="0" unchecked>
-				<label for="skip">Skip verbergen</label>
+				<label for="skip"><?php echo $texte[$language][6] ?></label>
 			</p>
       <p>
 				<input name="volume" id="volumeCB" type="checkbox" value="0" unchecked>
-				<label for="volume">Lautstärke verbergen</label>
+				<label for="volume"><?php echo $texte[$language][7] ?></label>
 			</p>
       <p>
 				<input name="repeat" id="repeatCB" type="checkbox" value="0" unchecked>
-				<label for="repeat">Repeat verbergen</label>
+				<label for="repeat"><?php echo $texte[$language][8] ?></label>
 			</p>
       <p>
 				<input name="random" id="randomCB" type="checkbox" value="0" unchecked>
-				<label for="random">Shuffle verbergen</label>
+				<label for="random"><?php echo $texte[$language][9] ?></label>
 			</p>
 			<p>&nbsp;</p>
 			<p>
-				<label for="playlists">Sollen Playlist-Shortcuts angezeigt werden?</label>
-				<input name="playlists" type="text" placeholder="Playlist-Namen bitte mit ':' trennen" value="">
+				<label for="playlists"><?php echo $texte[$language][10] ?></label>
+				<input name="playlists" type="text" placeholder="<?php echo $texte[$language][11] ?>" value="">
 			</p>
 			<p>&nbsp;</p>
-			<p><input type="submit" value="&nbsp;Fertig!&nbsp;"/></p>
+			<p><input type="submit" value="&nbsp;<?php echo $texte[$language][12] ?>&nbsp;"/></p>
 			<p>&nbsp;</p>
 			<p>&nbsp;</p>
 		</form>
@@ -64,14 +68,25 @@
 		}
 	}
 	</script>
+	<div id="language">
+<?php
+		for ($i=1; $i < count($texte) ; $i++) {
+			echo '		<a href="index.php?language=' . $i . '"';
+			if ($i == $language) {
+				echo ' class="active"';
+			}
+			echo '>' . $texte[$language][$i+12] . "</a>\n";
+		}
+?>
+	</div> <!-- Ende language -->
 	<div id="kontakt">
-		<a href="dtnschtz.php"><b>Dаtеnѕсһutz</b></a> - <a href="#" onclick="showHideText('kontaktdetails'); return false;"><b>Kontakt / Impressum</b></a>
+		<a href="dtnschtz.php?language=<?php echo $language ?>"><b><?php echo $texte[$language][15] ?></b></a> - <a href="#" onclick="showHideText('kontaktdetails'); return false;"><b><?php echo $texte[$language][16] ?></b></a>
 		<div id="kontaktdetails" style="display:none;">
-			<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b>Kontakt / Impressum</b></a>
+			<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b><?php echo $texte[$language][16] ?></b></a>
 			<p>&nbsp;</p>
 			<?php include('kontakt.txt'); ?>
 				<p>&nbsp;</p>
-				<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b>Kontakt / Impressum schließen</b></a>
+				<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b><?php echo $texte[$language][19] ?></b></a>
 			</div> <!-- Ende kontaktdetails -->
 		</div> <!-- Ende kontakt -->
 	</body>

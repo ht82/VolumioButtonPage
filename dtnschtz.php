@@ -1,3 +1,8 @@
+<!doctype html>
+<?php
+	$language=intval($_GET["language"] ?? "2");
+	$texte = json_decode(file_get_contents('translations.json'), false);
+?>
 <html>
 <head>
 	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
@@ -5,7 +10,7 @@
 	<meta http-equiv="language" content="deutsch, de">
 	<meta http-equiv="expires" content="0">
 	<meta name="robots" content="noindex, nofollow">
-	<title> Hinweise zum Dаtеnѕсһutz </title>
+	<title> <?php echo $texte[$language][20] ?> </title>
 	<link rel="icon" type="image/png" href="favicon.png" />
 	<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all" />
 	<style type="text/css">@import url(stylesheet_mobile.css) (max-width: 2px);</style>
@@ -22,7 +27,6 @@
 <body>
 
 	<div id="setup">
-		<h1>Hinweise zum Dаtеnѕсһutz</h1>
 <?php include('dtnschtz.txt'); ?>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
@@ -39,13 +43,13 @@
 	}
 	</script>
 	<div id="kontakt">
-		<a href="javascript:history.back()"><b>schließen</b></a> - <a href="#" onclick="showHideText('kontaktdetails'); return false;"><b>Kontakt / Impressum</b></a>
+		<a href="javascript:history.back()"><b><?php echo $texte[$language][18] ?></b></a> - <a href="#" onclick="showHideText('kontaktdetails'); return false;"><b><?php echo $texte[$language][16] ?></b></a>
 		<div id="kontaktdetails" style="display:none;">
-			<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b>Kontakt / Impressum</b></a>
+			<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b><?php echo $texte[$language][16] ?></b></a>
 			<p>&nbsp;</p>
       <?php include('kontakt.txt'); ?>
 				<p>&nbsp;</p>
-				<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b>Kontakt / Impressum schließen</b></a>
+				<a href="#" onclick="showHideText('kontaktdetails'); return false;"><b><?php echo $texte[$language][19] ?></b></a>
 			</div> <!-- Ende kontaktdetails -->
 		</div> <!-- Ende kontakt -->
 
