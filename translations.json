@@ -1,0 +1,52 @@
+[
+    [
+        "Deutsch",
+        "Englisch"
+    ],
+    [
+        "Konfiguriere Deine Volumio-Basissteuerung",
+        "Notwendige Einstellungen",
+        "Wie lautet die <b>IP-Adresse</b> deines Volumios?",
+        "1.2.3.4",
+        "Buttons reduzieren und Playlisten hinterlegen",
+        "Play/Pause verbergen",
+        "Skip verbergen",
+        "Lautstärke verbergen",
+        "Repeat verbergen",
+        "Shuffle verbergen",
+        "Sollen Playlist-Shortcuts angezeigt werden?",
+        "Plalist 1:Playlist 2",
+        "Fertig!",
+        "Deutsch",
+        "Englisch",
+        "Datenschutz",
+        "Kontakt / Impressum",
+        "Hier kannst Du ein einfaches Interface für die Basissteuerung eines Volumio in Deinem Heimnetzwerk konfigurieren. Die fertige Seite kann gleich genutzt werden, alternativ kann man auch den Quelltext in eine lokale HTML-Datei kopieren, beispielsweise wenn man die Seite lokal nutzen möchte.",
+        "schließen",
+        "Kontakt / Impressum schließen",
+        "Hinweise zum Datenschutz"
+    ],
+    [
+        "Configure your basic controls for Volumio",
+        "Required Settings",
+        "What's the <b>IP-Address</b> of your Volumios",
+        "1.2.3.4",
+        "Hide buttons and include Playlists",
+        "Hide Play/Pause",
+        "Hide Skip",
+        "Hide Volume",
+        "Hide Repeat",
+        "Hide Shuffle",
+        "Do you want Playlist-Shortcuts to be added?",
+        "Plalist 1:Playlist 2",
+        "Done!",
+        "German",
+        "English",
+        "Data protection",
+        "Contact",
+        "At this page you can setup a simple interface for basic controls of a Volumio audio player in your local network. The created page can be used immediately, but if you want to run it local, the html source code can be copied into a local HTML-file.",
+        "close",
+        "close contact details",
+        "Declaration of data protection"
+    ]
+]
