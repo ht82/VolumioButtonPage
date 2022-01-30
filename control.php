@@ -23,7 +23,132 @@
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="copyright" content="Hannes Trapp">
 	<link rel="icon" type="image/png" href="favicon.png" />
-	<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+
+  <style type="text/css" media="screen">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: black;
+    }
+
+    iframe {
+      /* display: block; */
+      display: none;
+    }
+
+    .bigbutton a {
+      font-size: 8vh;
+      text-decoration: none;
+    }
+
+    .hugebutton a {
+      font-size: 15vh;
+      text-decoration: none;
+    }
+
+    #playpause {
+      /* border: 1px solid green; */
+      position: fixed;
+      left: 40%;
+      top: 31%;
+      width: 20%;
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+    #skipZurueck {
+      /* border: 1px solid red; */
+      position: fixed;
+      left: 20%;
+      top: 31%;
+      width: 20%;
+      text-align: right;
+      vertical-align: bottom;
+    }
+
+    #skipVor {
+      /* border: 1px solid blue; */
+      position: fixed;
+      left: 60%;
+      top: 31%;
+      width: 20%;
+      text-align: left;
+      vertical-align: bottom;
+    }
+
+    #volumeRunter {
+      /* border: 1px solid black; */
+      position: fixed;
+      left: 40%;
+      top: 54%;
+      width: 20%;
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+    #volumeHoch {
+      /* border: 1px solid yellow; */
+      position: fixed;
+      left: 40%;
+      top: 5%;
+      width: 20%;
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+    #random {
+      /* border: 1px solid pink; */
+      position: fixed;
+      left: 75%;
+      top: 61%;
+      width: 20%;
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+    #repeat {
+      /* border: 1px solid deeppink; */
+      position: fixed;
+      left: 5%;
+      top: 61%;
+      width: 20%;
+      text-align: center;
+      vertical-align: bottom;
+    }
+
+    #playlists {
+      /* border: 1px solid deeppink; */
+      position: fixed;
+      left: 1%;
+      bottom: 5%;
+      width: 98%;
+      text-align: center;
+      vertical-align: bottom;
+      font-size: 1.4em;
+    }
+
+    #playlists table {
+      /* border: 1px solid blue; */
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    #playlists td {
+      /* border: 1px solid red; */
+      padding: 15px 0px;
+      white-space: nowrap;
+    }
+
+    td a {
+      text-decoration: none;
+      background-color: #422;
+      color: white;
+      padding: 12px;
+      border-radius: 100px;
+    }
+  </style>
+
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
